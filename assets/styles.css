@@ -1,0 +1,143 @@
+/* General reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #000;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-text {
+    z-index: 2; /* Ensures text is above any overlay */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-inquire {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: gold; /* Black and gold theme */
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inquire:hover {
+    background-color: #ffd700;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Packages */
+.package {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials */
+.testimonial {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: gold;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    background-color: #ffd700;
+}
+
+/* Live Chat */
+.live-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffd700;
+    padding: 10px;
+    border-radius: 50px;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.live-chat span {
+    font-weight: bold;
+}
