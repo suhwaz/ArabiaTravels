@@ -1,83 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arabia Travels</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <script src="assets/scripts.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arabia Travels</title>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <!-- Gradient Background Section -->
-    <div class="hero" style="background-image: linear-gradient(to bottom, #d4af37, #2d2d2d);">
-        <div class="hero-text">
-            <h1>Welcome to Arabia Travels</h1>
-            <p>We offer the best Umrah packages for families and youth.</p>
-            <!-- Moved buttons lower -->
-            <div class="buttons">
-                <a href="#inquire" class="btn">Inquire Now</a>
-                <a href="https://www.instagram.com/arabiatravels" class="btn">Visit Our Instagram Page</a>
-            </div>
-        </div>
+
+  <!-- Hero Section with Background Image -->
+  <div class="hero" style="background-image: url('assets/images/background.jpg');">
+    <div class="hero-text">
+      <h1>Welcome to Arabia Travels</h1>
+      <p>Find the perfect Umrah package for your spiritual journey.</p>
+      <div class="cta-buttons">
+        <a href="#packages" class="btn">Inquire Now</a>
+        <a href="https://www.instagram.com/arabia.travels/" class="btn">Visit Our Instagram Page</a>
+      </div>
     </div>
+  </div>
 
-    <!-- Promo Image and Video Section -->
-    <section class="promo-section">
-        <div class="promo-content">
-            <!-- Make sure these are displayed properly and resized -->
-            <img src="assets/images/promo-image.jpg" alt="Promo Poster" class="promo-img">
-            <video class="promo-video" autoplay muted controls>
-                <source src="assets/videos/Promo Salman.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
+  <!-- Promotional Section with Image & Video (Same size & aligned next to each other) -->
+  <div class="promo-section">
+    <img src="assets/images/promo poster.jpg" alt="Promo Poster" class="promo-poster">
+    <video class="promo-video" autoplay muted controls>
+      <source src="assets/videos/Promo Salman.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-    <!-- About Us Section -->
-    <section class="about-us" id="about-us">
-        <h2>About Us</h2>
-        <p>Arabia Travels is dedicated to providing unparalleled Umrah packages designed for families, friends, and youth groups. We understand the spiritual significance of Umrah and ensure our packages cater to the specific needs of each group, offering comfort, convenience, and professional services. Our experienced team ensures every detail is taken care of, making your journey memorable and hassle-free. Whether you're looking for a budget-friendly trip or a luxury experience, we provide the best options in the industry.</p>
-    </section>
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We offer a range of tailored Umrah packages to provide the best experience for young Muslims traveling for pilgrimage. With years of experience in organizing Umrah, we ensure our clients receive top-notch services and comfort throughout their journey.</p>
+  </section>
 
-    <!-- Our Packages Section -->
-    <section class="our-packages">
-        <h2>Our Packages</h2>
-        <div class="package-tiles">
-            <!-- Each tile will expand to show details when clicked -->
-            <div class="package-tile" onclick="toggleDetails('basic-package')">
-                <h3>Basic Package</h3>
-                <div class="package-details" id="basic-package">Details of Basic Package...</div>
-            </div>
-            <div class="package-tile" onclick="toggleDetails('standard-package')">
-                <h3>Standard Package</h3>
-                <div class="package-details" id="standard-package">Details of Standard Package...</div>
-            </div>
-            <div class="package-tile" onclick="toggleDetails('premium-package')">
-                <h3>Premium Package</h3>
-                <div class="package-details" id="premium-package">Details of Premium Package...</div>
-            </div>
-        </div>
-    </section>
+  <!-- Packages Section -->
+  <section id="packages" class="package-section">
+    <div class="package-tile" id="basic-package" onclick="toggleDescription('basic')">
+      <h3>Basic Package</h3>
+      <p class="package-description" id="basic-desc">A basic Umrah experience with essential services. Perfect for first-timers.</p>
+    </div>
+    <div class="package-tile" id="standard-package" onclick="toggleDescription('standard')">
+      <h3>Standard Package</h3>
+      <p class="package-description" id="standard-desc">Includes additional services and guided tours in the holy cities.</p>
+    </div>
+    <div class="package-tile" id="premium-package" onclick="toggleDescription('premium')">
+      <h3>Premium Package</h3>
+      <p class="package-description" id="premium-desc">A luxury Umrah experience with all-inclusive services and private transportation.</p>
+    </div>
+  </section>
 
-    <!-- Our Services Section -->
-    <section class="our-services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Customizable Umrah packages</li>
-            <li>Group and family accommodations</li>
-            <li>Experienced guides and staff</li>
-            <li>24/7 customer support</li>
-            <li>Transportation services</li>
-            <li>Visa assistance</li>
-        </ul>
-    </section>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Arabia Travels. <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="#privacy-policy">Privacy Policy</a> | 
-            <a href="#terms-conditions">Terms & Conditions</a>
-        </div>
-    </footer>
+  <script>
+    function toggleDescription(package) {
+      var desc = document.getElementById(package + "-desc");
+      if (desc.style.display === "none" || desc.style.display === "") {
+        desc.style.display = "block";
+      } else {
+        desc.style.display = "none";
+      }
+    }
+  </script>
+
 </body>
 </html>

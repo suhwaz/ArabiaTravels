@@ -1,147 +1,90 @@
-/* General Styling */
+/* General Styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background: #2d2d2d; /* Default background color */
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d4af37, #2d2d2d);
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .hero {
-    position: relative;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    padding: 0 20px;
-    text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+  font-size: 36px;
+  text-align: center;
 }
 
-.buttons {
-    margin-top: 20px;
+.cta-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: gold;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.btn {
-    background-color: #d4af37;
-    color: #2d2d2d;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 0 10px;
-}
-
-.btn:hover {
-    background-color: #b08d30;
-}
-
-/* Promo Section */
 .promo-section {
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adds spacing between the image and video */
+  padding: 50px 0;
+  text-align: center;
 }
 
-.promo-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
+.promo-poster, .promo-video {
+  width: 50%;
+  max-width: 540px; /* Both the image and video will be 540px in width */
+  height: auto;
+  border-radius: 10px;
 }
 
-.promo-img {
-    width: 50%;
-    max-width: 540px;
-    height: auto;
-    margin-right: 20px;
-}
-
-.promo-video {
-    width: 50%;
-    max-width: 540px;
-    height: auto;
-}
-
-/* About Us Section */
-.about-us {
-    padding: 50px;
-    background-color: #fff;
-    color: #333;
-    text-align: center;
-}
-
-/* Our Packages Section */
-.our-packages {
-    background-color: #d4af37;
-    padding: 50px;
-    color: #fff;
-}
-
-.package-tiles {
-    display: flex;
-    justify-content: space-between;
+.package-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
 }
 
 .package-tile {
-    background-color: #2d2d2d;
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 30%;
+  padding: 20px;
+  background: #333;
+  text-align: center;
+  border-radius: 10px;
 }
 
-.package-tile:hover {
-    background-color: #444;
+.package-description {
+  display: none;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
-.package-details {
-    display: none;
-    margin-top: 20px;
-    font-size: 1rem;
-    color: #fff;
-}
+@media only screen and (max-width: 768px) {
+  .promo-section {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* Our Services Section */
-.our-services {
-    padding: 50px;
-    background-color: #f1f1f1;
-    color: #333;
-}
+  .promo-poster, .promo-video {
+    width: 80%;
+    max-width: 100%;
+  }
 
-.our-services ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
+  .package-section {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.our-services ul li {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-/* Footer */
-footer {
-    background-color: #2d2d2d;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer .footer-links a {
-    color: #d4af37;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer .footer-links a:hover {
-    text-decoration: underline;
+  .package-tile {
+    width: 80%;
+    margin-bottom: 20px;
+  }
 }
