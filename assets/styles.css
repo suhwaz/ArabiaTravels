@@ -1,90 +1,105 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #d4af37, #2d2d2d);
-  color: #fff;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #d4af37, #2d2d2d);
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
-.hero {
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000;
 }
 
-.hero-text h1 {
-  font-size: 36px;
-  text-align: center;
+header img {
+    width: 150px;
 }
 
-.cta-buttons a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: gold;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-.promo-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* Adds spacing between the image and video */
-  padding: 50px 0;
-  text-align: center;
+nav ul li a {
+    color: #d4af37;
+    text-decoration: none;
 }
 
-.promo-poster, .promo-video {
-  width: 50%;
-  max-width: 540px; /* Both the image and video will be 540px in width */
-  height: auto;
-  border-radius: 10px;
+.promo {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
 }
 
-.package-section {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px 0;
+.promo img, .promo video {
+    width: 48%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .promo {
+        flex-direction: column;
+    }
+    .promo img, .promo video {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+section h2 {
+    text-align: center;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
 }
 
 .package-tile {
-  width: 30%;
-  padding: 20px;
-  background: #333;
-  text-align: center;
-  border-radius: 10px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
-.package-description {
-  display: none;
-  font-size: 14px;
-  margin-top: 10px;
+.package-tile:hover {
+    transform: scale(1.05);
 }
 
-@media only screen and (max-width: 768px) {
-  .promo-section {
-    flex-direction: column;
+.contact-info {
+    list-style: none;
+    padding: 20px;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .promo-poster, .promo-video {
-    width: 80%;
-    max-width: 100%;
-  }
+footer img {
+    width: 100px;
+}
 
-  .package-section {
-    flex-direction: column;
-    align-items: center;
-  }
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
 
-  .package-tile {
-    width: 80%;
-    margin-bottom: 20px;
-  }
+footer ul li a {
+    color: #d4af37;
+    text-decoration: none;
 }
