@@ -1,105 +1,90 @@
 body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    padding: 0;
     background: linear-gradient(to bottom, #d4af37, #2d2d2d);
     color: #fff;
 }
 
-.header {
-    position: relative;
-}
-
-.hero {
-    position: relative;
+header {
     text-align: center;
     padding: 50px;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.header-buttons {
+    margin: 20px 0;
 }
 
-.cta-button,
-.instagram-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
+.btn {
     background: #000;
-    color: #d4af37;
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
-    border: none;
     border-radius: 5px;
+    margin: 0 10px;
 }
 
-.package-container {
+.promo {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.package {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin: 10px;
     padding: 20px;
-    cursor: pointer;
-    transition: transform 0.2s;
 }
 
-.package:hover {
-    transform: scale(1.05);
+.promo img,
+.promo video {
+    width: 48%;
+    height: auto;
 }
 
-.service-list {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-}
-
-.service-list li {
+h2 {
     text-align: center;
-    padding: 20px;
 }
 
-.service-list i {
-    font-size: 2em;
-    color: #d4af37;
-}
-
-.testimonial-container {
+.package-tiles {
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
 }
 
-.testimonial {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 10px;
+.package-tile {
+    background: #444;
     padding: 20px;
+    margin: 10px;
     border-radius: 5px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.service {
+    text-align: center;
+    margin: 20px;
 }
 
 footer {
+    background: #000;
+    color: #fff;
     text-align: center;
     padding: 20px;
-    background: #000;
 }
 
 .footer-logo {
-    width: 150px;
-    margin-bottom: 10px;
+    width: 100px;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
-    .package-container {
-        flex-direction: column;
-    }
-
-    .service-list {
+    .promo {
         flex-direction: column;
         align-items: center;
+    }
+    .promo img,
+    .promo video {
+        width: 100%;
+        height: auto;
+    }
+    .package-tiles {
+        flex-direction: column;
+    }
+    .package-tile {
+        width: 100%;
     }
 }

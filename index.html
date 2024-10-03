@@ -1,109 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arabia Travels</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
     <header>
-        <div class="hero">
-            <img src="assets/images/background.jpg" alt="Background" class="background">
-            <h1>Welcome to Arabia Travels</h1>
-            <button class="cta-button">Inquire Now</button>
-            <a href="https://www.instagram.com/arabia.travels/" class="instagram-link">Visit Our Instagram Page</a>
+        <h1>Welcome to Arabia Travels</h1>
+        <p>Your journey begins here!</p>
+        <div class="header-buttons">
+            <a href="#contact" class="btn">Inquire Now</a>
+            <a href="https://www.instagram.com/arabia.travels/" class="btn">Visit Our Instagram Page</a>
         </div>
     </header>
 
-HEAD
-
-    <!-- Promo Section with Poster and Video -->
-     <section class="promo">
+    <section class="promo">
         <div class="promo-poster">
-            <img src="assets/images/promo poster.jpg" alt="Promo Poster">
+            <img src="assets/images/promo poster.jpg" alt="Promo Poster" class="responsive">
         </div>
         <div class="promo-video">
-            <video width="1080" height="1920" controls>
+            <video width="1080" height="1920" controls class="responsive">
                 <source src="assets/videos/Promo Salman.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-       </div>
+        </div>
     </section>
 
-    <!-- About Us Section -->
     <section id="about">
         <h2>About Us</h2>
-        <!-- Additional content for the About Us section can go here -->
-    </section>
-        <p>
-            At Arabia Travels, we are committed to providing exceptional Umrah experiences, tailored to meet the needs of our clients. Our dedicated team offers personalized service, ensuring that every aspect of your journey is seamless and memorable. We understand the significance of this spiritual journey, and our mission is to make it accessible and enjoyable for everyone.
-        </p>
+        <p>At Arabia Travels, we offer unmatched services for Umrah packages tailored for youth. Our mission is to
+            provide memorable experiences, top-notch accommodations, and dedicated support throughout your journey.</p>
     </section>
 
     <section id="packages">
         <h2>Our Packages</h2>
-        <div class="package-container">
-            <div class="package" onclick="toggleDetails(this)">
+        <div class="package-tiles">
+            <div class="package-tile" onclick="toggleDetails(this)">
                 <h3>Basic Package</h3>
-                <p class="description">A budget-friendly option for your Umrah journey.</p>
-                <div class="details" style="display: none;">
-                    <p>Includes flights and basic accommodations.</p>
-                    <button class="book-button">Book Now</button>
-                </div>
+                <p class="details" style="display:none;">Includes flights and basic accommodation.</p>
             </div>
-            <div class="package" onclick="toggleDetails(this)">
+            <div class="package-tile" onclick="toggleDetails(this)">
                 <h3>Standard Package</h3>
-                <p class="description">An enhanced package with additional comforts.</p>
-                <div class="details" style="display: none;">
-                    <p>Includes flights, accommodations, and guided tours.</p>
-                    <button class="book-button">Book Now</button>
-                </div>
+                <p class="details" style="display:none;">Includes flights, accommodation, and guided tours.</p>
             </div>
-            <div class="package" onclick="toggleDetails(this)">
+            <div class="package-tile" onclick="toggleDetails(this)">
                 <h3>Premium Package</h3>
-                <p class="description">The ultimate Umrah experience.</p>
-                <div class="details" style="display: none;">
-                    <p>Includes all features with luxury accommodations.</p>
-                    <button class="book-button">Book Now</button>
-                </div>
+                <p class="details" style="display:none;">Includes everything in Standard plus luxury accommodations.</p>
             </div>
         </div>
     </section>
 
     <section id="services">
         <h2>Our Services</h2>
-        <ul class="service-list">
-            <li>
+        <div class="services-list">
+            <div class="service">
                 <i class="fas fa-plane"></i>
                 <h3>Flights</h3>
-                <p>We offer competitive flight rates for your convenience.</p>
-            </li>
-            <li>
+                <p>We offer competitive flight options for your convenience.</p>
+            </div>
+            <div class="service">
                 <i class="fas fa-bed"></i>
                 <h3>Accommodations</h3>
-                <p>Comfortable stays near holy sites.</p>
-            </li>
-            <li>
-                <i class="fas fa-user-friends"></i>
+                <p>Stay in the best hotels with excellent services.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-users"></i>
                 <h3>Guided Tours</h3>
-                <p>Experienced guides to enhance your journey.</p>
-            </li>
-        </ul>
+                <p>Join our guided tours for an enriching experience.</p>
+            </div>
+        </div>
     </section>
 
     <section id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial-container">
-            <div class="testimonial">
-                <p>"My experience with Arabia Travels was exceptional! Highly recommend!"</p>
-                <p>- Sarah</p>
-            </div>
-            <div class="testimonial">
-                <p>"A seamless journey, from start to finish. Thank you, Arabia Travels!"</p>
-                <p>- Ahmed</p>
-            </div>
+        <h2>Client Testimonials</h2>
+        <div class="testimonial">
+            <p>"Arabia Travels made our Umrah experience unforgettable!"</p>
+            <h4>- Client Name</h4>
         </div>
     </section>
 
@@ -115,14 +92,22 @@ HEAD
             <textarea placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
+        <p>Email: <a href="mailto:arabiatravelsuk@gmail.com">arabiatravelsuk@gmail.com</a></p>
+        <p>Phone: +123456789</p>
     </section>
 
     <footer>
         <img src="https://github.com/suhwaz/ArabiaTravels/blob/master/assets/images/logo.png" alt="Logo" class="footer-logo">
-        <p>Privacy Policy | Terms & Conditions</p>
-        <p>Follow us on <a href="https://www.instagram.com/arabia.travels/">Instagram</a></p>
+        <p>&copy; 2024 Arabia Travels. All rights reserved.</p>
+        <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a></p>
     </footer>
 
-    <script src="assets/scripts.js"></script>
+    <script>
+        function toggleDetails(element) {
+            const details = element.querySelector('.details');
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </body>
+
 </html>
