@@ -10,13 +10,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #FFD700;
+    color: #000;
     background: url('assets/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 h1, h2, h3 {
-    color: #000;
+    color: #FFD700;
     font-weight: bold;
 }
 
