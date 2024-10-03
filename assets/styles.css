@@ -1,119 +1,147 @@
-/* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styling */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background: url('assets/images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
     color: #333;
+    line-height: 1.6;
+    background: #2d2d2d; /* Default background color */
 }
 
-h1, h2, h3 {
-    color: #d4af37; /* Custom gold */
-}
-
-/* Hero Section */
 .hero {
-    height: 100vh;
+    position: relative;
+    height: 600px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 0 20px;
     text-align: center;
-    color: white;
-    background-size: cover;
-    background-position: center;
 }
 
 .hero-text h1 {
-    font-size: 4rem;
-    color: gold;
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.btn-inquire {
-    background-color: gold;
-    color: black;
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #d4af37;
+    color: #2d2d2d;
     padding: 10px 20px;
-    text-transform: uppercase;
-    border-radius: 5px;
     text-decoration: none;
-    transition: 0.3s;
+    border-radius: 5px;
+    margin: 0 10px;
 }
 
-.btn-inquire:hover {
-    background-color: #ffd700;
+.btn:hover {
+    background-color: #b08d30;
 }
 
-/* Sections */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
+/* Promo Section */
 .promo-section {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    margin: 50px 0;
 }
 
-.promo-poster {
-    max-width: 100%;
+.promo-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.promo-img {
+    width: 50%;
+    max-width: 540px;
     height: auto;
-    width: 40%;
+    margin-right: 20px;
 }
 
 .promo-video {
     width: 50%;
+    max-width: 540px;
     height: auto;
 }
 
-@media (max-width: 768px) {
-    .promo-poster, .promo-video {
-        width: 100%;
-    }
+/* About Us Section */
+.about-us {
+    padding: 50px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
 }
 
-/* Contact Form */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+/* Our Packages Section */
+.our-packages {
+    background-color: #d4af37;
+    padding: 50px;
+    color: #fff;
 }
 
-form input, form textarea {
+.package-tiles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.package-tile {
+    background-color: #2d2d2d;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.package-tile:hover {
+    background-color: #444;
+}
+
+.package-details {
+    display: none;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Our Services Section */
+.our-services {
+    padding: 50px;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.our-services ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.our-services ul li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
-form button {
-    background-color: gold;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 5px;
+footer .footer-links a {
+    color: #d4af37;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-/* Live Chat */
-.live-chat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: gold;
-    padding: 10px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.live-chat span {
-    font-weight: bold;
+footer .footer-links a:hover {
+    text-decoration: underline;
 }

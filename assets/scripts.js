@@ -1,7 +1,9 @@
-// Placeholder for form submission logic
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Your message has been sent!');
-});
-
-// Third-party live chat integration can go here.
+// Toggle visibility of package details
+function toggleDetails(packageId) {
+    const details = document.getElementById(packageId);
+    if (details.style.display === "block") {
+        details.style.display = "none";
+    } else {
+        details.style.display = "block";
+    }
+}
