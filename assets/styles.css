@@ -1,90 +1,210 @@
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #d4af37, #2d2d2d);
-    color: #fff;
+    background-color: #2d2d2d; /* Dark Background */
+    color: #fff; /* White Text */
 }
 
-header {
+h1, h2, h3 {
+    color: #d4af37; /* Gold Text */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
     text-align: center;
-    padding: 50px;
+    z-index: 2; /* Make sure content is above background */
 }
 
-.header-buttons {
-    margin: 20px 0;
+.buttons {
+    margin-top: 20px;
 }
 
 .btn {
-    background: #000;
-    color: #fff;
     padding: 10px 20px;
-    text-decoration: none;
+    margin: 10px;
+    border: none;
     border-radius: 5px;
-    margin: 0 10px;
+    cursor: pointer;
 }
 
+.btn-primary {
+    background-color: #d4af37;
+    color: black;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+/* Promo Section */
 .promo {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
 
-.promo img,
-.promo video {
-    width: 48%;
+.promo-poster, .promo-video {
+    width: 48%; /* Make both sides equal */
+}
+
+.promo-poster img {
+    width: 100%;
     height: auto;
 }
 
-h2 {
+.promo-video {
+    display: flex;
+    justify-content: center;
+}
+
+/* About Us Section */
+#about {
+    padding: 20px;
     text-align: center;
 }
 
-.package-tiles {
-    display: flex;
-    justify-content: center;
+/* Packages Section */
+#packages {
     padding: 20px;
+}
+
+.packages {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .package-tile {
-    background: #444;
+    background-color: #333;
+    border: 1px solid #d4af37;
+    border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    border-radius: 5px;
     width: 30%;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.service {
+.package-tile:hover {
+    transform: scale(1.05);
+}
+
+.package-details {
+    display: none;
+}
+
+.package-tile:hover .package-details {
+    display: block; /* Show details on hover */
+}
+
+/* Services Section */
+#services {
+    padding: 20px;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.services-list li i {
+    margin-right: 10px;
+    color: #d4af37; /* Gold Icons */
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 20px;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.testimonial {
+    min-width: 100%; /* Ensure each testimonial takes full width */
+}
+
+/* Contact Section */
+#contact {
+    padding: 20px;
     text-align: center;
-    margin: 20px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+/* Footer */
 footer {
-    background: #000;
+    background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 10px 0;
 }
 
 .footer-logo {
-    width: 100px;
+    width: 150px; /* Adjust size as necessary */
 }
 
+.footer-links a {
+    color: #d4af37;
+    margin: 0 10px;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .promo {
         flex-direction: column;
         align-items: center;
     }
-    .promo img,
-    .promo video {
-        width: 100%;
-        height: auto;
+    
+    .promo-poster, .promo-video {
+        width: 100%; /* Stack on mobile */
+        margin: 10px 0;
     }
-    .package-tiles {
+
+    .packages {
         flex-direction: column;
+        align-items: center;
     }
+
     .package-tile {
-        width: 100%;
+        width: 90%; /* Make packages wider on mobile */
     }
 }
