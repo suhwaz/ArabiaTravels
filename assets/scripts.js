@@ -1,8 +1,7 @@
-function toggleDetails(packageId) {
-    const details = document.getElementById(packageId);
-    if (details.style.display === "block") {
-        details.style.display = "none";
-    } else {
-        details.style.display = "block";
-    }
-}
+// Script for toggling package details
+document.querySelectorAll('.expand-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const details = button.nextElementSibling;
+        details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    });
+});
