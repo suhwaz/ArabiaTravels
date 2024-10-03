@@ -1,0 +1,119 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('assets/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #d4af37; /* Custom gold */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    color: gold;
+}
+
+.btn-inquire {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-inquire:hover {
+    background-color: #ffd700;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.promo-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.promo-poster {
+    max-width: 100%;
+    height: auto;
+    width: 40%;
+}
+
+.promo-video {
+    width: 50%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .promo-poster, .promo-video {
+        width: 100%;
+    }
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: gold;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+/* Live Chat */
+.live-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: gold;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.live-chat span {
+    font-weight: bold;
+}
