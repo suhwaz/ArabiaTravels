@@ -22,7 +22,7 @@ nav ul li {
 }
 
 #hero {
-    background-image: url('https://github.com/suhwaz/ArabiaTravels/blob/master/assets/images/kaabah.jpg');
+    background-image: url('"C:\Users\suhai\OneDrive\Documents\ArabiaTravels\assets\images\kaabah.jpg"');
     height: 400px;
     background-size: cover;
     position: relative;
