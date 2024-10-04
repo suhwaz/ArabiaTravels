@@ -1,169 +1,133 @@
-/* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     color: #333;
+    background: linear-gradient(to bottom, #d4af37, #2d2d2d);
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
-    background: linear-gradient(to bottom, #d4af37, #2d2d2d);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    color: white;
 }
 
-.hero-overlay img {
+.hero-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.6; /* Semi-transparent effect */
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
     z-index: 1;
-    opacity: 0.6; /* Semi-transparent overlay */
 }
 
-.hero-content {
+.hero h1 {
     position: relative;
     z-index: 2;
-    color: #fff;
-    text-align: center;
+    font-size: 3em;
+    margin: 0;
 }
 
-.cta-btn {
-    background-color: #d4af37;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.cta-btn:hover {
-    background-color: #c39b2c;
+.hero p {
+    position: relative;
+    z-index: 2;
 }
 
 /* Promo Section */
 .promo {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 20px;
     padding: 20px;
 }
 
-.promo-item {
-    flex: 1;
-}
-
-.promo-poster,
-.promo-video {
-    width: 100%;
+.promo-image {
+    width: 30%; /* Adjusted size */
     height: auto;
-    max-width: 1920px;
-    max-height: 1080px;
-    object-fit: cover;
 }
 
-@media (max-width: 768px) {
-    .promo {
-        flex-direction: column;
-    }
+.promo-video {
+    width: 30%; /* Adjusted size */
 }
 
 /* Packages Section */
-.packages {
+.package-tiles {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
 }
 
 .package-tile {
-    flex: 1 1 calc(33.33% - 20px);
-    background-color: #fff;
+    flex: 1 1 30%;
+    margin: 10px;
     padding: 20px;
-    border: 1px solid #d4af37;
-    transition: transform 0.3s;
-    cursor: pointer;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
 }
 
 .package-tile:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.package-content {
+.package-details {
     display: none;
+    transition: all 0.3s ease;
 }
 
-.package-tile.active .package-content {
-    display: block;
+.expand-button {
+    margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-    .package-tile {
-        flex: 1 1 100%;
-    }
+/* About Us and Services Section */
+section {
+    padding: 20px;
 }
 
-/* Footer Section */
+/* Footer */
 footer {
-    background-color: #2d2d2d;
-    padding: 40px 20px;
     text-align: center;
-    color: #fff;
+    padding: 20px;
+    background: #2d2d2d;
+    color: white;
 }
 
 .footer-logo {
-    width: 150px;
-    margin-bottom: 20px;
+    width: 100px; /* Adjusted size for visibility */
 }
 
-.footer-links {
-    list-style: none;
-    padding: 0;
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.footer-links li {
-    display: inline-block;
-    margin: 0 10px;
+input, textarea {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 1em;
 }
 
-.footer-links a {
-    color: #d4af37;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #fff;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .promo {
+        flex-direction: column;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+
+    .promo-image, .promo-video {
+        width: 100%;
     }
-}
 
-.package-tile {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-.cta-btn, .promo-item img, .promo-video {
-    transition: transform 0.3s ease;
-}
-
-.cta-btn:hover, .promo-item:hover img, .promo-item:hover video {
-    transform: scale(1.05);
+    .package-tile {
+        flex: 1 1 100%;
+    }
 }

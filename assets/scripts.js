@@ -1,8 +1,10 @@
-// Toggle package details on click
-const packageTiles = document.querySelectorAll('.package-tile');
-
-packageTiles.forEach(tile => {
-    tile.addEventListener('click', () => {
-        tile.classList.toggle('active');
+document.querySelectorAll('.expand-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const details = button.nextElementSibling;
+        if (details.style.display === 'block') {
+            details.style.display = 'none';
+        } else {
+            details.style.display = 'block';
+        }
     });
 });
