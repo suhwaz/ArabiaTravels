@@ -5,90 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umrah Travels</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay">
-            <h1>Experience Your Spiritual Journey</h1>
-            <button id="inquire-btn">Inquire Now</button>
+    <header>
+        <h1>Umrah Travels</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#packages">Our Packages</a></li>
+                <li><a href="#promo">Promotional</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="overlay">
+            <h2>Experience the Spiritual Journey</h2>
+            <button onclick="scrollToSection('contact')">Inquire Now</button>
         </div>
     </section>
 
-    <!-- About Us Section -->
     <section id="about">
         <h2>About Us</h2>
-        <p>We offer customized Umrah packages to make your spiritual journey memorable.</p>
-        <img src="assets/images/about.jpg" alt="About Us">
+        <p>We are dedicated to providing exceptional Umrah packages that ensure a memorable journey.</p>
     </section>
 
-    <!-- Our Packages Section -->
     <section id="packages">
         <h2>Our Packages</h2>
         <div class="package-tiles">
-            <div class="package-tile" onclick="toggleDetails(this)">
-                <h3>Youth Umrah</h3>
-                <p>Explore our Youth Umrah packages tailored for young pilgrims.</p>
-            </div>
-            <div class="package-tile" onclick="toggleDetails(this)">
-                <h3>Family Umrah</h3>
-                <p>Experience Umrah together with your family in comfort.</p>
-            </div>
-            <div class="package-tile" onclick="toggleDetails(this)">
-                <h3>Sisters Umrah</h3>
-                <p>Special packages designed for sisters embarking on this spiritual journey.</p>
-            </div>
+            <div class="tile">Youth Umrah</div>
+            <div class="tile">Family Umrah</div>
+            <div class="tile">Sisters Umrah</div>
         </div>
     </section>
 
-    <!-- Promotional Section -->
-    <section id="promotional">
-        <h2>Promotions</h2>
-        <div class="promotional-content">
-            <img src="assets/images/promo poster.jpg" alt="Poster" class="promo-poster">
-            <video class="promo-video" autoplay muted>
-                <source src="assets/videos/Promo Salman.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <section id="promo">
+        <h2>Promotional Section</h2>
+        <div class="promo-container">
+            <img src="C:\Users\suhai\OneDrive\Documents\ArabiaTravels\assets\images\poster.jpg" alt="Promo Poster" class="promo-item">
+            <video src="C:\Users\suhai\OneDrive\Documents\ArabiaTravels\assets\videos\Promo Salman.mp4" controls muted autoplay class="promo-item"></video>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services">
         <h2>Our Services</h2>
-        <div class="service-list">
-            <div class="service-item">
-                <h3>Flight Booking</h3>
-                <p>Book your flights easily with us.</p>
-            </div>
-            <div class="service-item">
-                <h3>Accommodation</h3>
-                <p>Stay in comfortable hotels close to the Haram.</p>
-            </div>
-            <div class="service-item">
-                <h3>Guided Tours</h3>
-                <p>Explore the holy sites with our experienced guides.</p>
-            </div>
-        </div>
+        <ul>
+            <li>Flight Booking</li>
+            <li>Hotel Reservations</li>
+            <li>Guided Tours</li>
+        </ul>
     </section>
 
-    <!-- Testimonials Section -->
     <section id="testimonials">
         <h2>Testimonials</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial-item">
-                <p>"A life-changing experience!"</p>
-                <h4>- Sarah</h4>
-            </div>
-            <div class="testimonial-item">
-                <p>"Excellent services and support."</p>
-                <h4>- Ahmed</h4>
-            </div>
+        <div class="testimonial-container">
+            <div class="testimonial-item">"An unforgettable experience!"</div>
+            <div class="testimonial-item">"Highly recommend their services!"</div>
+            <div class="testimonial-item">"Everything was perfectly organized."</div>
         </div>
     </section>
 
-    <!-- Contact Us Section -->
     <section id="contact">
         <h2>Contact Us</h2>
         <form id="contact-form">
@@ -99,12 +79,9 @@
         </form>
     </section>
 
-    <!-- Footer Section -->
     <footer>
-        <div class="footer-content">
-            <p>Follow us on <a href="https://instagram.com/arabiatravels" target="_blank">Instagram</a></p>
-            <p>&copy; 2024 Umrah Travels. All rights reserved.</p>
-        </div>
+        <p>Follow us on Instagram</p>
+        <p>&copy; 2024 Umrah Travels. All rights reserved.</p>
     </footer>
 
     <script src="assets/scripts.js"></script>
