@@ -1,12 +1,21 @@
-// This is where you can add any interactive JavaScript you might need.
-document.querySelectorAll('.expand-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const tile = this.parentElement;
-        tile.classList.toggle('expanded');
-        if (tile.classList.contains('expanded')) {
-            tile.querySelector('p').innerText += ' - Detailed information goes here.';
-        } else {
-            tile.querySelector('p').innerText = tile.querySelector('p').innerText.split(' - ')[0];
-        }
+// Initialize EmailJS with your public API key
+emailjs.init("YOUR_PUBLIC_API_KEY"); // Replace with your public API key
+
+// Function to handle form submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Send email using EmailJS
+    emailjs.send("Ib3347M_GbhwVWh7p", "template_k13gcwd", {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+    })
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert("Your message has been sent successfully!"); // Alert on success
+    }, function(error) {
+        console.log('FAILED...', error);
+        alert("There was an error sending your message. Please try again."); // Alert on failure
     });
 });
