@@ -1,7 +1,8 @@
-// Script for toggling package details
-document.querySelectorAll('.expand-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const details = button.nextElementSibling;
-        details.style.display = details.style.display === 'block' ? 'none' : 'block';
+// Toggle package details on click
+const packageTiles = document.querySelectorAll('.package-tile');
+
+packageTiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+        tile.classList.toggle('active');
     });
 });
