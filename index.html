@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabia Travels</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Arabia Travels</title>
 </head>
 <body>
 
     <!-- Hero Section -->
-    <header class="hero">
-        <div class="overlay"></div>
-        <img src="assets/images/background.jpg" alt="Kaabah" class="hero-image">
+    <section class="hero">
         <h1>Welcome to Arabia Travels</h1>
-        <p>Your Journey Begins Here</p>
-    </header>
+        <p>Your journey to spirituality and adventure begins here!</p>
+    </section>
 
     <!-- Promo Section with Poster and Video -->
     <section class="promo">
         <div class="promo-poster">
-            <img src="assets/images/promo poster.jpg" alt="Promo Poster" class="promo-image">
+            <img src="assets/images/promo poster.jpg" alt="Promo Poster">
         </div>
         <div class="promo-video">
-            <video width="100%" height="auto" controls>
+            <video controls>
                 <source src="assets/videos/Promo Salman.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -36,37 +34,26 @@
         <p>Welcome to Travels Arabia! We are dedicated to providing enriching and exceptional travel experiences to young Muslims. Our mission is to ensure a stress-free and deeply spiritual journey, allowing you to focus on your faith while exploring new places. Led by knowledgeable guides and scholars, we prioritize comfort, safety, and a sense of community, making every trip a memorable one. Join us as we embark on journeys that inspire and transform.</p>
     </section>
 
-    <!-- Packages Section -->
+    <!-- Our Packages Section -->
     <section id="packages">
         <h2>Our Packages</h2>
-        <div class="package-tiles">
-            <div class="package-tile">
-                <h3>Youth Umrah 2024</h3>
-                <p>Dates: 10th Nov - 19th Nov</p>
-                <p>Package Price: £879</p>
-                <button class="expand-button">Details</button>
-                <div class="package-details">
-                    <p>Tailored for young Muslims aged 16+, this package includes spiritual and leisure activities such as desert nights, quad biking, and five-a-side football. It’s a perfect blend of faith and fun.</p>
-                </div>
-            </div>
-            <div class="package-tile">
-                <h3>Family Umrah Experience</h3>
-                <p>Dates: Open throughout the year</p>
-                <p>Price: Starting at £1,200</p>
-                <button class="expand-button">Details</button>
-                <div class="package-details">
-                    <p>Designed for families, this package offers comprehensive support with family-friendly accommodation, guided tours, and activities for all ages, ensuring a fulfilling experience for every member.</p>
-                </div>
-            </div>
-            <div class="package-tile">
-                <h3>Exclusive Sisters Umrah</h3>
-                <p>Dates: Various dates available</p>
-                <p>Price: £950</p>
-                <button class="expand-button">Details</button>
-                <div class="package-details">
-                    <p>A women-only package focusing on spiritual growth and camaraderie among sisters. Includes special sessions with female scholars, comfortable accommodations, and exclusive excursions.</p>
-                </div>
-            </div>
+        <div class="package-tile">
+            <h3>Youth Umrah 2024</h3>
+            <p>Dates: 10th Nov - 19th Nov</p>
+            <p>Package Price: £879</p>
+            <button class="expand-btn">Details</button>
+        </div>
+        <div class="package-tile">
+            <h3>Family Umrah Experience</h3>
+            <p>Dates: Open throughout the year</p>
+            <p>Price: Starting at £1,200</p>
+            <button class="expand-btn">Details</button>
+        </div>
+        <div class="package-tile">
+            <h3>Exclusive Sisters Umrah</h3>
+            <p>Dates: Various dates available</p>
+            <p>Price: £950</p>
+            <button class="expand-btn">Details</button>
         </div>
     </section>
 
@@ -77,7 +64,7 @@
             <li><i class="fas fa-plane"></i> Round-Trip Airfare & Visa</li>
             <li><i class="fas fa-bus"></i> Full Transportation</li>
             <li><i class="fas fa-bed"></i> Accommodations</li>
-            <li><i class="fas fa-map-marked-alt"></i> Ziyarah Excursions</li>
+            <li><i class="fas fa-landmark"></i> Ziyarah Excursions</li>
             <li><i class="fas fa-utensils"></i> Culinary Services</li>
             <li><i class="fas fa-users"></i> Youth Activities</li>
         </ul>
@@ -87,21 +74,21 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
-        <p>Email: info@arabiatravels.co.uk</p>
-        <p>Phone: +44 123 456 7890</p>
-        <p>Follow us on Instagram: <a href="https://www.instagram.com/arabia.travels/">@arabia.travels</a></p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <img src="assets/images/logo.png" alt="Logo" class="footer-logo">
-        <p>&copy; 2024 Arabia Travels. All rights reserved.</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        <img src="assets/images/logo.png" alt="Arabia Travels Logo">
+        <p>&copy; 2024 Arabia Travels. All Rights Reserved.</p>
+        <p><a href="https://www.instagram.com/arabia.travels/">Instagram</a></p>
     </footer>
 
     <script src="script.js"></script>
