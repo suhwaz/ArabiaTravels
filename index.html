@@ -1,94 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umrah Travels</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script defer src="assets/scripts.js"></script>
+    <title>Explore Umrah and Adventure with Arabia Travels Today!</title>
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Join Arabia Travels in London, AL for tailored Umrah packages and adventurous experiences worldwide. Discover your next journey with us!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Arabia Travels</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#packages">Our Packages</a></li>
-                <li><a href="#promo">Promotional</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <div class="overlay">
-            <h2>Experience the Spiritual Journey of Umrah</h2>
-            <button onclick="scrollToSection('contact')">Inquire Now</button>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are dedicated to providing exceptional Umrah packages that ensure a memorable journey of a lifetime.</p>
-    </section>
-
-    <section id="packages">
-        <h2>Our Packages</h2>
-        <div class="package-tiles">
-            <div class="tile">Youth Umrah</div>
-            <div class="tile">Family Umrah</div>
-            <div class="tile">Sisters Umrah</div>
-        </div>
-    </section>
-
-    <section id="promo">
-        <h2>Promotional Section</h2>
-        <div class="promo-container">
-            <img src="assets/images/promo poster.jpg" alt="Promo Poster" class="promo-item">
-            <video src="assets/videos/Promo Salman.mp4" controls muted autoplay class="promo-item"></video>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Flight Booking</li>
-            <li>Hotel Reservations</li>
-            <li>Guided Tours</li>
-            <li>Tharbiyah Sessions</li>
-            <li>Ziyarah Excursions</li>
-            <li>Desert Nights & BBQ</li>
-            <li>Quad Biking</li>
-            <li>5 A Side Football</li>
+<body class="flex min-h-full flex-col bg-background text-base text-foreground">
+    <nav class="navbar nav-height fixed left-0 top-0 z-30 flex w-full flex-col bg-background px-8 shadow-md lg:flex-row lg:px-4" role="navigation">
+        <ul class="layer-content flex h-20 w-full flex-row items-center lg:h-auto lg:flex-1 lg:gap-6" role="menu">
+            <li class="logo mr-auto flex items-center" role="menuitem"><a href="/" class="font-logo color-rule-7">Arabia Travels</a></li>
+            <li><a href="/umrah-packages">Umrah Packages</a></li>
+            <li><a href="/youth-programs">Youth Programs</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/store">Store</a></li>
         </ul>
-    </section>
+    </nav>
 
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial-container">
-            <div class="testimonial-item">"An unforgettable experience!"</div>
-            <div class="testimonial-item">"Highly recommend their services!"</div>
-            <div class="testimonial-item">"Everything was perfectly organized."</div>
+    <section class="layer relative bg-highlight">
+        <div class="layer-content relative flex flex-col items-start justify-center gap-6 py-16 pb-24 md:py-32">
+            <h1 class="from-left whitespace-pre-line break-words font-title text-4xl md:max-w-3xl lg:text-6xl text-highlight-text">Journey Into the Heart of Adventure Today</h1>
+            <div class="delay-1 whitespace-pre-line break-words md:max-w-xl text-highlight-text">Experience unforgettable moments with our tailored Umrah packages and exciting adventures worldwide.</div>
+            <a class="delay-2 button mt-2 bg-highlight-button text-highlight-button-text shadow-md" href="/contact">Connect Now</a>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="packages" class="layer">
+        <div class="layer-content flex flex-col gap-8 py-12 lg:flex-row-reverse lg:gap-12 lg:py-24">
+            <div class="flex min-w-0 flex-col lg:basis-1/2 lg:justify-center">
+                <h2 class="from-top subheading-typical whitespace-pre-line break-words lg:text-lg">Tailored Travel Experiences Await You</h2>
+                <h1 class="from-bottom heading-typical mt-4 whitespace-pre-line break-words">Discover Personalized Adventures that Excite Your Spirit</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
         <h2>Contact Us</h2>
         <form id="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
         </form>
     </section>
 
-    <footer>
-        <img src="assets/images/logo.png" alt="Company Logo">
-        <p>Follow us on Instagram</p>
-        <p>&copy; 2024 Umrah Travels. All rights reserved.</p>
+    <footer class="layer mt-auto bg-black py-4 text-white">
+        <div class="layer-content flex w-full flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+                <div class="text-xl uppercase lg:text-2xl">Arabia Travels</div>
+                <a href="mailto:arabiatravelsuk@gmail.com">arabiatravelsuk@gmail.com</a>
+            </div>
+            <a href="https://www.instagram.com/arabia.travels/" target="_blank">@arabia.travels</a>
+        </div>
     </footer>
 </body>
 </html>

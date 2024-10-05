@@ -1,174 +1,63 @@
-/* General Styling */
+:root {
+    --menu-height: 5rem;
+    --logo-font: "Julius Sans One";
+    --body-font: "Pt Sans";
+    --background: #000000;
+    --button: #F8D547;
+    --foreground: #FFFFFF;
+    --highlight: #484848;
+    --highlight-button: #FFFFFF;
+}
+
 body {
+    font-family: var(--body-font);
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #d4af37, #2d2d2d);
-    color: white;
-}
-
-/* Header */
-header {
-    background: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
     padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+.navbar {
+    background-color: var(--background);
+    padding: 1rem;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.layer-content {
+    padding: 2rem;
 }
 
-/* Hero Section */
-#hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('assets/images/kaabah.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; /* To ensure text is visible on the dark overlay */
+.from-left {
+    animation: fadeIn 1s forwards;
 }
 
-/* Adjust hero text style */
-#hero h2 {
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-#hero button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #d4af37; /* Gold color */
+.button {
+    background-color: var(--button);
+    color: var(--highlight-button);
+    padding: 0.5rem 1rem;
     border: none;
-    color: white;
     cursor: pointer;
-    border-radius: 5px;
 }
 
-#hero button:hover {
-    background-color: #b99230; /* Darker gold on hover */
+.contact-section {
+    padding: 2rem;
+    background-color: #464646;
 }
 
-/* Section Styling */
-section {
-    padding: 50px 20px;
-    text-align: center;
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: #2d2d2d;
+    color: white;
 }
 
-#about, #services, #testimonials, #contact {
-    background-color: #333;
-    color: #fff;
-}
-
-/* Packages Section */
-.package-tiles {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.tile {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    transition: transform 0.3s;
-}
-
-.tile:hover {
-    transform: scale(1.05);
-}
-
-/* Promo Section */
-.promo-container {
-    display: flex;
-    justify-content: center; /* Center the promo items horizontally */
-    align-items: center; /* Center them vertically (if needed) */
-    gap: 20px; /* Add some space between the poster and the video */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-.promo-item {
-    width: 360px; /* Set a fixed width to keep both poster and video the same size */
-    height: auto; /* Keep the aspect ratio intact */
-    border-radius: 10px; /* Optional: Add rounded corners */
-}
-
-/* Services Section */
-#services ul {
-    list-style: none;
-    padding: 0;
-}
-
-#services li {
-    background-color: #444;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Testimonials Section */
-.testimonial-container {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-    position: relative;
-}
-
-.testimonial-item {
-    background-color: #444;
-    padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    animation: slideIn 10s infinite;
-}
-
-@keyframes slideIn {
-    0% { transform: translateX(100%); }
-    50% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
-
-/* Footer */
 footer {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--background);
     text-align: center;
-    padding: 20px;
-    position: relative;
+    padding: 1rem;
 }
 
-footer img {
-    max-width: 100px;
-    margin-top: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .promo-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .promo-item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .package-tiles {
-        flex-direction: column;
-    }
+footer a {
+    color: var(--button);
 }
