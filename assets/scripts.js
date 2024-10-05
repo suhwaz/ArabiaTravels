@@ -1,14 +1,26 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const serviceID = 'service_0z1klrr';
-    const templateID = 'template_k13gcwd';
+// Smooth scroll to sections
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
 
-    emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
+// EmailJS form submission
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_0z1klrr', 'template_k13gcwd', this)
+        .then(function () {
             alert('Message sent successfully!');
-            this.reset();
-        }, (err) => {
-            alert('Failed to send message: ' + JSON.stringify(err));
+        }, function (error) {
+            alert('Failed to send message. Please try again.');
         });
 });
+
+// Testimonial Animation
+let currentIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial-item');
+setInterval(() => {
+    testimonials.forEach((testimonial, index) => {
+        testimonial.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+    });
+    currentIndex = (currentIndex + 1) % testimonials.length;
+}, 5000);
