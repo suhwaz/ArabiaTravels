@@ -102,7 +102,7 @@ section {
 }
 
 .promo-item {
-    width: 400px; /* Set a fixed width to keep both poster and video the same size */
+    width: 360px; /* Set a fixed width to keep both poster and video the same size */
     height: auto; /* Keep the aspect ratio intact */
     border-radius: 10px; /* Optional: Add rounded corners */
 }
