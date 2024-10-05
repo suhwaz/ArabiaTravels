@@ -1,7 +1,7 @@
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    emailjs.sendForm('service_id', 'template_k13gcwd', this)
+    emailjs.sendForm('service_0z1klrr', 'template_k13gcwd', this)
     .then(function() {
         alert('Message sent successfully!');
     }, function(error) {

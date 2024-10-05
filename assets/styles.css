@@ -2,9 +2,9 @@
     --menu-height: 5rem;
     --logo-font: "Julius Sans One";
     --body-font: "Pt Sans";
-    --background: #000000;
-    --button: #F8D547;
-    --foreground: #FFFFFF;
+    --background: #000000; /* Black background */
+    --button: #F8D547; /* Gold button */
+    --foreground: #FFFFFF; /* White text */
     --highlight: #484848;
     --highlight-button: #FFFFFF;
 }
