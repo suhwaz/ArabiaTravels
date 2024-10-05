@@ -31,32 +31,35 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-    background: url('assets/images/kaabah.jpg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('assets/images/kaabah.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white; /* To ensure text is visible on the dark overlay */
 }
 
-#hero .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    text-align: center;
-}
-
+/* Adjust hero text style */
 #hero h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 #hero button {
     padding: 10px 20px;
-    font-size: 1.2em;
-    background-color: #d4af37;
+    font-size: 1.2rem;
+    background-color: #d4af37; /* Gold color */
     border: none;
-    color: #000;
+    color: white;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+#hero button:hover {
+    background-color: #b99230; /* Darker gold on hover */
 }
 
 /* Section Styling */
@@ -92,14 +95,16 @@ section {
 /* Promo Section */
 .promo-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Center the promo items horizontally */
+    align-items: center; /* Center them vertically (if needed) */
+    gap: 20px; /* Add some space between the poster and the video */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .promo-item {
-    width: 400px;
-    height: auto;
-    border-radius: 10px;
+    width: 400px; /* Set a fixed width to keep both poster and video the same size */
+    height: auto; /* Keep the aspect ratio intact */
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 /* Services Section */
