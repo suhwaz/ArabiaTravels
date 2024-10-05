@@ -26,8 +26,20 @@ body {
     padding: 2rem;
 }
 
-.from-left {
-    animation: fadeIn 1s forwards;
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(45deg, #d4af37, #2d2d2d);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    color: var(--foreground);
+}
+
+.hero-section p {
+    margin: 1rem 0;
+    color: var(--foreground);
 }
 
 .button {
@@ -36,6 +48,17 @@ body {
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
+}
+
+.tile {
+    background-color: var(--button);
+    padding: 2rem;
+    margin: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.tile:hover {
+    transform: scale(1.05);
 }
 
 .contact-section {
@@ -60,4 +83,11 @@ footer {
 
 footer a {
     color: var(--button);
+}
+
+.testimonial {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #333;
+    border-radius: 8px;
 }
