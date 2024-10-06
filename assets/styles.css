@@ -29,7 +29,13 @@ body {
 .hero-section {
     text-align: center;
     padding: 4rem 2rem;
-    background: linear-gradient(45deg, #d4af37, #2d2d2d);
+    background: linear-gradient(45deg, rgba(212, 175, 55, 0.8), rgba(45, 45, 45, 0.8)), url('path/to/your/image.jpg') no-repeat center center; /* Replace with your image path */
+    background-size: cover; /* Ensure the background image covers the section */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-section h1 {
@@ -48,17 +54,46 @@ body {
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e6b800; /* Lighter gold on hover */
 }
 
 .tile {
     background-color: var(--button);
     padding: 2rem;
     margin: 1rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Added transition for hover effect */
 }
 
 .tile:hover {
     transform: scale(1.05);
+    background-color: #d4af37; /* Example hover color */
+}
+
+.testimonial-tile {
+    background-color: var(--button); /* Background color for the tile */
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+    margin: 1rem 0;
+}
+
+.testimonial-tile:hover {
+    transform: scale(1.05); /* Add hover effect for the testimonial tile */
+}
+
+.testimonial {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.testimonial.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact-section {
@@ -85,9 +120,60 @@ footer a {
     color: var(--button);
 }
 
+/* Add animation for tile visibility on scroll */
+.tile {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tile.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.visible {
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Carousel Styles */
+.testimonial-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
 .testimonial {
-    margin: 1rem 0;
-    padding: 1rem;
-    background-color: #333;
-    border-radius: 8px;
+    flex: 0 0 100%; /* Each testimonial takes full width */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--button);
+    color: var(--foreground);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
