@@ -1,179 +1,160 @@
-:root {
-    --menu-height: 5rem;
-    --logo-font: "Julius Sans One";
-    --body-font: "Pt Sans";
-    --background: #000000; /* Black background */
-    --button: #F8D547; /* Gold button */
-    --foreground: #FFFFFF; /* White text */
-    --highlight: #484848;
-    --highlight-button: #FFFFFF;
-}
-
+/* General Styles */
 body {
-    font-family: var(--body-font);
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background);
-    color: var(--foreground);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
+/* Navigation Bar */
 .navbar {
-    background-color: var(--background);
-    padding: 1rem;
-}
-
-.layer-content {
-    padding: 2rem;
-}
-
-.hero-section {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(45deg, rgba(212, 175, 55, 0.8), rgba(45, 45, 45, 0.8)), url('path/to/your/image.jpg') no-repeat center center; /* Replace with your image path */
-    background-size: cover; /* Ensure the background image covers the section */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero-section h1 {
-    font-size: 3rem;
-    color: var(--foreground);
-}
-
-.hero-section p {
-    margin: 1rem 0;
-    color: var(--foreground);
-}
-
-.button {
-    background-color: var(--button);
-    color: var(--highlight-button);
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #e6b800; /* Lighter gold on hover */
-}
-
-.tile {
-    background-color: var(--button);
-    padding: 2rem;
-    margin: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Added transition for hover effect */
-}
-
-.tile:hover {
-    transform: scale(1.05);
-    background-color: #d4af37; /* Example hover color */
-}
-
-.testimonial-tile {
-    background-color: var(--button); /* Background color for the tile */
-    padding: 2rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* Add transition for hover effect */
-    margin: 1rem 0;
-}
-
-.testimonial-tile:hover {
-    transform: scale(1.05); /* Add hover effect for the testimonial tile */
-}
-
-.testimonial {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.testimonial.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.contact-section {
-    padding: 2rem;
-    background-color: #464646;
-}
-
-input,
-textarea {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
     width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    background-color: #2d2d2d;
-    color: white;
+    z-index: 999;
 }
 
-footer {
-    background-color: var(--background);
+.navbar .logo {
+    color: #fff;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(90deg, rgba(255,204,0,1) 0%, rgba(255,255,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
     text-align: center;
-    padding: 1rem;
+    color: #fff;
+    padding-top: 80px;
 }
 
-footer a {
-    color: var(--button);
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
 }
 
-/* Add animation for tile visibility on scroll */
-.tile {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+.hero h1 {
+    font-size: 3rem;
+    font-family: 'Julius Sans One', sans-serif;
+    color: #fff;
 }
 
-.tile.visible {
-    opacity: 1;
-    transform: translateY(0);
+.hero .cta-button {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
-/* Scroll animations */
-@keyframes fadeIn {
-    from {
+.hero .cta-button:hover {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+/* Section Styles */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+section p, ul {
+    color: #333;
+    line-height: 1.6;
+}
+
+ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+.animate-slide {
+    animation: slide-in 1s ease-out;
+}
+
+.animate-fade {
+    animation: fade-in 1.5s ease-in;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
         opacity: 0;
     }
-    to {
+    100% {
+        transform: translateX(0);
         opacity: 1;
     }
 }
 
-.visible {
-    animation: fadeIn 0.5s forwards;
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-/* Carousel Styles */
-.testimonial-carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-}
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
 
-.testimonial {
-    flex: 0 0 100%; /* Each testimonial takes full width */
-    transition: transform 0.5s ease; /* Smooth transition */
-}
+    .navbar ul {
+        flex-direction: column;
+    }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--button);
-    color: var(--foreground);
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 2;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
+    section {
+        padding: 50px 20px;
+    }
 }

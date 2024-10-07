@@ -1,59 +1,43 @@
+// EmailJS Contact Form
+(function() {
+    emailjs.init("Ib3347M_GbhwVWh7p");  // Replace with your EmailJS user ID
+})();
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    emailjs.sendForm('service_0z1klrr', 'template_k13gcwd', this)
-    .then(function() {
-        alert('Message sent successfully!');
-    }, function(error) {
-        alert('Failed to send the message. Please try again later.');
-    });
+    emailjs.sendForm('service_0z1klrr', 'template_kyql5f3', this)
+        .then(function() {
+            document.getElementById('response-message').style.display = 'block';
+        }, function(error) {
+            console.log('FAILED...', error);
+        });
 });
 
-// Scroll Animation for Tiles and Testimonials
-const tiles = document.querySelectorAll('.tile');
-const testimonials = document.querySelectorAll('.testimonial');
+window.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.animate-fade, .animate-slide');
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+        if (position < windowHeight - 100) {
+            el.classList.add('visible');
         }
     });
 });
 
-// Observe each tile
-tiles.forEach(tile => {
-    observer.observe(tile);
-});
+// Image Carousel for Hero Section
+let slideIndex = 0;
+showSlides();
 
-// Observe each testimonial
-testimonials.forEach(testimonial => {
-    observer.observe(testimonial); // Add testimonials to the observer
-});
-
-// Carousel Functionality
-let currentIndex = 0;
-const totalTestimonials = testimonials.length;
-
-function showTestimonials(index) {
-    testimonials.forEach((testimonial, i) => {
-        testimonial.style.transform = `translateX(${(i - index) * 100}%)`;
-    });
+function showSlides() {
+    let slides = document.getElementsByClassName("hero-image");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
-function nextTestimonial() {
-    currentIndex = (currentIndex + 1) % totalTestimonials;
-    showTestimonials(currentIndex);
-}
-
-function prevTestimonial() {
-    currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
-    showTestimonials(currentIndex);
-}
-
-// Initialize the carousel
-showTestimonials(currentIndex);
-
-// Add event listeners to the buttons
-document.querySelector('.next').addEventListener('click', nextTestimonial);
-document.querySelector('.prev').addEventListener('click', prevTestimonial);
