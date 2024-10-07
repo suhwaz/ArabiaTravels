@@ -15,7 +15,7 @@ body {
     align-items: center;
     padding: 20px;
     position: fixed;
-    width: 100%;
+    width: 99%;  /* Width reduced to one-third for mobile */
     z-index: 999;
 }
 
@@ -28,7 +28,13 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.nav-links li {
+    width: auto;
 }
 
 .nav-links li a {
@@ -43,7 +49,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(90deg, rgba(255,204,0,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(90deg, #000 0%, #FFD700 100%);  /* Kaabah-inspired gradient */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,93 +67,43 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 1.6;
+    opacity: 1.0;
 }
 
 .hero h1 {
     font-size: 3rem;
-    font-family: 'Julius Sans One', sans-serif;
-    color: #faf9f8;
+    color: #FFD700;
 }
 
-.hero .cta-button {
-    background-color: #ffcc00;
-    color: #faf9f8;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+/* Testimonial Carousel */
+.testimonial-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
 }
 
-.hero .cta-button:hover {
-    background-color: #ffa500;
-    color: #fff;
-}
-
-/* Section Styles */
-section {
-    padding: 100px 20px;
+.testimonial-slide {
+    display: none;
     text-align: center;
+    padding: 20px;
 }
 
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffcc00;
+.carousel-nav {
+    text-align: center;
+    margin-top: 20px;
 }
 
-section p, ul {
-    color: #333;
-    line-height: 1.6;
+.carousel-nav .prev, .carousel-nav .next {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #000;
+    border-radius: 50%;
 }
 
-ul li {
-    list-style: none;
-    margin: 10px 0;
-}
-
-/* Animations */
-.animate-slide {
-    animation: slide-in 1s ease-out;
-}
-
-.animate-fade {
-    animation: fade-in 1.5s ease-in;
-}
-
-@keyframes slide-in {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Responsive Styling */
-@media screen and (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    section {
-        padding: 50px 20px;
-    }
+.carousel-nav .prev:hover, .carousel-nav .next:hover {
+    background-color: #ffa500;
 }
 
 /* Footer Styles */
@@ -165,4 +121,24 @@ ul li {
 
 .footer p {
     font-size: 14px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
 }

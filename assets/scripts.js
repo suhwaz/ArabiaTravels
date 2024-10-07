@@ -14,16 +14,30 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         });
 });
 
-window.addEventListener('scroll', () => {
-    const elements = document.querySelectorAll('.animate-fade, .animate-slide');
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+// Testimonial Carousel
+let testimonialIndex = 0;
+showTestimonialSlides();
 
-        if (position < windowHeight - 100) {
-            el.classList.add('visible');
-        }
-    });
+function showTestimonialSlides() {
+    let slides = document.getElementsByClassName("testimonial-slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    testimonialIndex++;
+    if (testimonialIndex > slides.length) {testimonialIndex = 1}    
+    slides[testimonialIndex - 1].style.display = "block";  
+    setTimeout(showTestimonialSlides, 2500);  // Slide every 2.5 seconds
+}
+
+// Carousel Arrows
+document.querySelector('.prev').addEventListener('click', function() {
+    testimonialIndex = (testimonialIndex - 1 + slides.length) % slides.length;
+    showTestimonialSlides();
+});
+
+document.querySelector('.next').addEventListener('click', function() {
+    testimonialIndex = (testimonialIndex + 1) % slides.length;
+    showTestimonialSlides();
 });
 
 // Image Carousel for Hero Section
@@ -38,6 +52,5 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}    
     slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 4000); // Change image every 4 seconds
+    setTimeout(showSlides, 4000);  // Change image every 4 seconds
 }
-
